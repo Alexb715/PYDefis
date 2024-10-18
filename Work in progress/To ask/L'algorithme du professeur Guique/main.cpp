@@ -12,11 +12,14 @@ répéter tant que k est strictement inférieur à 1000-n
     n ← a + b
     augmenter k de 1
 fin répéter*/
-    for(k; k <1000-n;k++){
-        a=b;
-        b= c+a;
-        c=4*c -3*a - b;
-        n=a+b;
+    while(k< 1000-n){
+        auto tmp = a;
+        auto tmp2=b;
+        a = b;
+        b = c + tmp;
+        c = -4*c - 3*a - b;
+        n = a + b;
+        k++;
     }
     cout << a << "\t" << b << "\t" << c;
 }

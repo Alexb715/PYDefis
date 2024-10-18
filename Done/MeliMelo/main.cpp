@@ -21,7 +21,7 @@ int main() {
             word += tmp2;
         }
         if(valid == word) {
-            cout << word << endl;
+            cout << words << endl << word;
             return 0;
         }
         word.clear();
