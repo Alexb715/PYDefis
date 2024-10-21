@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <iostream>
 #include <unordered_set>
 #include<vector>
@@ -22,13 +23,13 @@ int main(){
         Watched.insert(i);
     }
     for(int i = 0; i<Agent.size(); i++){
-        int minDistance = 100000000;
+        double minDistance = 100000000;
         int watching=0;
-        int x1 = Agent[i].x;
-        int y1 = Agent[i].y;
+        double x1 = Agent[i].x;
+        double y1 = Agent[i].y;
         for(int j = 0; j<Agent.size(); j++){
             if(j == i) continue;
-            int dis = sqrt((x1 - Agent[j].x)*(x1 - Agent[j].x) + (y1 - Agent[j].y)*(y1 - Agent[j].y));
+            double dis = sqrt(pow((x1 - Agent[j].x),2) + pow((y1 - Agent[j].y),2));
             if(dis < minDistance){
                 minDistance = dis;
                 watching = j;
@@ -38,7 +39,12 @@ int main(){
         Watched.erase(watching);
 
     }
-    cout << Watched.size() << endl;
-    for(auto i: Watched){
-        cout << i << " ";}
+    vector<int> result;
+    for(auto i : Watched){
+        result.push_back(i);
+            }
+            sort(result.begin(),result.end());
+            for(auto i : result){
+                cout << i << ",";
+            }
         }
