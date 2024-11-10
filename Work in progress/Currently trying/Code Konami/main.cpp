@@ -9,12 +9,9 @@ int main(){
  for(int i = 0; i< amount; i++){
     string code;
     getline(cin,code);
+    cout << code << endl;
     
-    cout << code.size() << endl;
 
-    //keyValues[code] = value;
- }   
-    for(auto i : keyValues){
-        cout << i.first << " -> " << i.second << endl;
+    //keyValues[code] = value; }
     }
 }
