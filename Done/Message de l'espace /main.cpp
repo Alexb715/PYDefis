@@ -19,7 +19,7 @@ class Files{
         string info;
         while(input >> info){
             bool rare = true;
-            for(int i = 0; i < info.size(); i = i + 4){
+            for(int i = 0; i <= info.size() - 4; i++){
                 set<char> current;
                 
                 for(int j = 0; j < 4; j++){
@@ -30,7 +30,6 @@ class Files{
                     else rare = false;
                     
                 }
-                current.clear();
             }
             if(rare == true){
                 count++;
