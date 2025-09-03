@@ -1,7 +1,7 @@
 
 
 
-file = open('/home/alex/Desktop/Projects/PYDefis/Work in progress/Currently trying/Code Konami/in.txt')
+file = open('./in.txt')
 amountOfCode = file.readline()
 amountOfCode = int(amountOfCode)
 map = {}
